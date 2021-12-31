@@ -1,23 +1,19 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Add In All Password Character Options
+// add all character options
 
 var lowercaseChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var specialChar = ["~", "!", "@", "#", "$", "%", "^", "&", "*", +"=", ";", ":", "'", ">", "<", "?"];
 var numericChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-// Response from clicking button
-
-function generatePassword() {
-  console.log("Let's generate a secure password!")
-}
+// initiate variables
 
 var password = "";
 var passwordChar = "";
 
-// Set password length between eight and 128
+// set password length between eight and 128
 
 var passwordLength = 0
 
@@ -30,6 +26,8 @@ while (passwordLength < 8 || passwordLength > 128 ){
     alert("You're aiming high but coming up short. Your password cannot be more than 128 characters.")
   }  
 }
+
+
 
 // Write password to the #password input 
 function writePassword() {
