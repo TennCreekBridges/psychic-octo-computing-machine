@@ -3,10 +3,10 @@ var generateBtn = document.querySelector("#generate");
 
 // Add In All Password Character Options
 
-var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
-var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var specialChar = "~!@#$%^&*+=;:'><?";
-var numericChar = "0123456789"
+var lowercaseChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var uppercaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var specialChar = ["~", "!", "@", "#", "$", "%", "^", "&", "*", +"=", ";", ":", "'", ">", "<", "?"];
+var numericChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 // Response from clicking button
 
@@ -30,28 +30,6 @@ while (passwordLength < 8 || passwordLength > 128 ){
     alert("You're aiming high but coming up short. Your password cannot be more than 128 characters.")
   }  
 }
-
-
-
-// if (typeof numericChar != 'passwordLength') {
-//   alert("Password length must consist of numeric characters.");
-// }
-
-
-
-
-// isNaN(passwordLength);
-//   if (isNaN == true) {
-//     alert ("Password length must consist of numeric characters.");
-//   }
-
-// function checkNan() {
-//   var passwordLength = document.passwordLength.value;
-//   console.log(passwordLength);
-//   if(isNaN(passwordLength)) {
-//     alert ("Password length must consist of numeric characters.");
-//   }
-// }
 
 // Write password to the #password input 
 function writePassword() {
