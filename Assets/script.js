@@ -33,6 +33,26 @@ while (passwordLength < 8 || passwordLength > 128 ){
 
 
 
+// if (typeof numericChar != 'passwordLength') {
+//   alert("Password length must consist of numeric characters.");
+// }
+
+
+
+
+// isNaN(passwordLength);
+//   if (isNaN == true) {
+//     alert ("Password length must consist of numeric characters.");
+//   }
+
+// function checkNan() {
+//   var passwordLength = document.passwordLength.value;
+//   console.log(passwordLength);
+//   if(isNaN(passwordLength)) {
+//     alert ("Password length must consist of numeric characters.");
+//   }
+// }
+
 // Write password to the #password input 
 function writePassword() {
   var password = generatePassword();
