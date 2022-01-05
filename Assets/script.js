@@ -38,6 +38,7 @@ while (((lowerY && upperY && specialY && numericY) == false) || ((lowerY == "no"
   if(((lowerY == "no") && (upperY == "no") && (specialY == "no") && (numericY == "no")) == true) {
     alert("You need at least one type of character to generate your password. Please try again.");
      }
+
 }
 
 // set constant values for lower, upper, special and numeric arrays
@@ -49,53 +50,46 @@ const numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 // initialize empty array 
 
-var passVariables = "";
+var passVariables = [];
 
 // select password variables based on yes/no above and concatinate to passVariables
 
 if (lowerY == 'yes') {
-   (passVariables = (passVariables + lower));
+  passVariables = passVariables.concat(lower);
 }
 
 if (upperY == 'yes') {
-  (passVariables = (passVariables + upper));
+  passVariables = passVariables.concat(upper);
 }
 
 if (specialY == 'yes') {
-  (passVariables = (passVariables + special));
+  passVariables = passVariables.concat(special);
 }
 
 if (numericY == 'yes') {
-  (passVariables = (passVariables + numeric));
+  passVariables = passVariables.concat(numeric);
 }
 
+console.log(passVariables);
+console.log(passVariables.length);
+
+
+
+// function generatePassword () {
+//   var password = "";
+//   for (var i=0; i < passwordLength; i++) {
+//     var random = Math.floor(Math.random() * passVariables.length);
+//     password += passVariables[random];
+//   }
+// }
 
 var password = "";
 
-for (i=0; i < passwordLength; i++) {
-  password += passVariables.charAt(Math.floor(Math.random() * passVariables.length));
+for (var i=0; i < passwordLength; i++) {
+  password += passVariables.charAt[Math.floor(Math.random() * passVariables.length)];
 }
 
-// return password;
-
-// return password.join('');
-
-
-
-// while (passwordLength > password.length) {
-//   var password = password[Math.floor(Math.random() * password.length)];
-// }
-
-// for (var i = 0; i < passwordLength; i++) {
-
-
-
-console.log(password.length);
-
 console.log(password);
-
-console.log(passVariables);
-
 
 // Write password to the #password input
 
