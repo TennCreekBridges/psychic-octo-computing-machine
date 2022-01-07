@@ -1,19 +1,24 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
 
 // set password length between eight and 128
 
-var passwordLength = 0
+let passwordLength = 0
 
-while (passwordLength < 8 || passwordLength > 128) {
-  passwordLength = parseInt(prompt("Your password must be between eight and 128 characters. How many characters should be in your password?"));
+while (passwordLength < 8 || passwordLength > 128 || Number.isNaN(passwordLength)) {
+  passwordLength = parseInt(prompt("Your password must be between 8 and 128 characters. How many characters should be in your password?"));
   if (passwordLength < 8) {
     alert("Invalid response. Your password must contain more than seven characters.");
   }
   if (passwordLength > 128) {
     alert("You're aiming high but coming up short. Your password cannot be more than 128 characters.");
   }  
+  if (Number.isNaN(passwordLength)) {
+    alert("You must enter a numeric response.");
+  }
+  console.log(passwordLength);
 
+ 
 
   // if (isNaN(passwordLength)) {
   //   alert("You must enter a numeric response.");
@@ -22,10 +27,10 @@ while (passwordLength < 8 || passwordLength > 128) {
 
 // set varialbes to false for comparison
 
-var lowerY = false;
-var upperY = false;
-var specialY = false;
-var numericY = false;
+let lowerY = false;
+let upperY = false;
+let specialY = false;
+let numericY = false;
 
 // select whether lowercase, uppercase, numbers or symbols are to be used in the password
 
@@ -50,7 +55,7 @@ const numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 // initialize empty array 
 
-var passVariables = [];
+let passVariables = [];
 
 // select password variables based on yes/no above and concatinate to passVariables
 
@@ -73,31 +78,23 @@ if (numericY == 'yes') {
 console.log(passVariables);
 console.log(passVariables.length);
 
+// create empty array for 'password'
 
+let password = [];
 
-// function generatePassword () {
-//   var password = "";
-//   for (var i=0; i < passwordLength; i++) {
-//     var random = Math.floor(Math.random() * passVariables.length);
-//     password += passVariables[random];
-//   }
-// }
+// add a random character from passVariables until password length = correct
 
-var password = "";
-
-for (var i=0; i < passwordLength; i++) {
-  password += passVariables.charAt[Math.floor(Math.random() * passVariables.length)];
+for (let i=0; i < passwordLength; i++) {
+   password += passVariables[Math.floor(Math.random() * passVariables.length)];
 }
 
-console.log(password);
+// write password to #password input
 
-// Write password to the #password input
+let password2 = ""
 
 function writePassword() {
-  var password2 = document.querySelector("#password");
+  password2 = document.querySelector("#password");
   password2.value = password;
 }
 
 generateBtn.addEventListener("click", writePassword);
-
-// const numeric = ["0","1","2","3","4","5","6","7","8","9","0",];
