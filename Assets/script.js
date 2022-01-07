@@ -16,13 +16,6 @@ while (passwordLength < 8 || passwordLength > 128 || Number.isNaN(passwordLength
   if (Number.isNaN(passwordLength)) {
     alert("You must enter a numeric response.");
   }
-  console.log(passwordLength);
-
- 
-
-  // if (isNaN(passwordLength)) {
-  //   alert("You must enter a numeric response.");
-  // }
 }
 
 // set varialbes to false for comparison
@@ -43,10 +36,9 @@ while (((lowerY && upperY && specialY && numericY) == false) || ((lowerY == "no"
   if(((lowerY == "no") && (upperY == "no") && (specialY == "no") && (numericY == "no")) == true) {
     alert("You need at least one type of character to generate your password. Please try again.");
      }
-
 }
 
-// set constant values for lower, upper, special and numeric arrays
+// set constant array values for lower, upper, special and numeric arrays - yes I realize that 'numeric' isn't of type 'number'
 
 const lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 const upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
@@ -97,4 +89,5 @@ function writePassword() {
   password2.value = password;
 }
 
+// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
