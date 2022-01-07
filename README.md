@@ -22,7 +22,6 @@ This project features HTML5, W3.CSS 4.15 & JavaScript 1.7.
 Starting source HTML & CSS provided by Trilogy Education Services.
 
 # SCREENSHOT
-Deployed application appearance:
 ![Screen Shot 2022-01-07 at 3 20 18 PM](https://user-images.githubusercontent.com/91682561/148609776-c0f181cf-8f2f-4444-a66c-81efbaf65a7c.png)
 
 # LINK 
